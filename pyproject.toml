@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "ursip"
+version = "0.1.0"
+description = ""
+authors = ["zephyrean <dev@zephyrean.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.2.1"
+openpyxl = "^3.1.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
