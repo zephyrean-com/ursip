@@ -8,9 +8,18 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 django = "^4.2.1"
+pandas = "^2.0.1"
+sqlalchemy = "^2.0.13"
 openpyxl = "^3.1.2"
+djangorestframework = "^3.14.0"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.isort]
+multi_line_output = 3
+force_grid_wrap = 2
+include_trailing_comma = true

@@ -24,8 +24,9 @@ SECRET_KEY = 'django-insecure-m*&+523e4-s6*9@ccfk_t4a@$za=kyt&83js7_909qm2p8g$v4
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+RANDOM_SEED = 117
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -36,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'calculations.apps.CalculationsConfig',
 ]
 
@@ -54,8 +56,7 @@ ROOT_URLCONF = 'ursip.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,3 +123,17 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+##################
+# REST FRAMEWORK #
+##################
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (),
+    'DEFAULT_PAGINATION_CLASS': None,
+    'DEFAULT_PERMISSION_CLASSES': (),
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    ),
+}
